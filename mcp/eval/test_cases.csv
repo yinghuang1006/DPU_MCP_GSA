@@ -1,0 +1,25 @@
+case_id,category,question_plain,tool,arguments_json,check_path,match_type,expected,source_of_truth,curator_checked,notes
+C01,correctness,How many papers reuse phs001493?,find_data_reusers,"{""identifier"": ""phs001493""}",results.0.summary.reuse_papers,equals,28,pandas count on data CSVs 2026-11-13,,16 Tool 1 + 12 Tool 2
+C02,correctness,How many papers reuse phs000452?,find_data_reusers,"{""identifier"": ""phs000452""}",results.0.summary.reuse_papers,equals,219,pandas count on data CSVs 2026-11-13,,211 Tool 1 + 8 Tool 2
+C03,correctness,How many papers reuse phs000467?,find_data_reusers,"{""identifier"": ""phs000467""}",results.0.summary.reuse_papers,equals,61,pandas count on data CSVs 2026-11-13,,38 Tool 1 + 23 Tool 2
+C04,correctness,How many papers reuse phs002371?,find_data_reusers,"{""identifier"": ""phs002371""}",results.0.summary.reuse_papers,equals,44,pandas count on data CSVs 2026-11-13,,38 Tool 1 + 6 Tool 2
+C05,input,Which study does seed PMID 29301960 belong to?,find_data_reusers,"{""identifier"": ""29301960""}",resolved.accessions.0,equals,phs001493,studies.json source_pmids,,Miao 2018 Science
+C06,input,Which study does seed PMID 22622578 belong to?,find_data_reusers,"{""identifier"": ""22622578""}",resolved.accessions.0,equals,phs000452,studies.json source_pmids,,Berger 2012
+C07,input,Does a version suffix work (phs001493.v3.p1)?,find_data_reusers,"{""identifier"": ""phs001493.v3.p1""}",resolved.accessions.0,equals,phs001493,input rule,,
+C08,correctness,Is PMID 40745034 listed as a reuser of phs001493?,find_data_reusers,"{""identifier"": ""phs001493"", ""max_papers"": 200}",results.0.papers,list_has_pmid,40745034,papers.csv Confirmed use (rule B),,curator: confirm from full text
+C09,where,Top repository reusers name for phs000452?,find_reuse_data_sources,"{""identifier"": ""phs000452""}",results.0.this_dataset.where_reusers_say_they_got_it.0.source,equals,dbGaP (database of Genotypes and Phenotypes),pandas count on pathways.csv,,
+C10,where,How many reuse papers name dbGaP for phs000452?,find_reuse_data_sources,"{""identifier"": ""phs000452""}",results.0.this_dataset.where_reusers_say_they_got_it.0.papers,equals,56,pandas count on pathways.csv,,
+C11,funders,How many phs001493 reuse papers name a counted funder?,find_reuse_funders,"{""identifier"": ""phs001493""}",results.0.summary.reuse_papers_with_counted_funder,equals,16,pandas count on grants.csv,,
+C12,funders,Top funder of phs001493 reuse?,find_reuse_funders,"{""identifier"": ""phs001493""}",results.0.top_funders.0.funder,equals,NIH/NCI,pandas count on grants.csv,,9 papers
+C13,funders,How many phs000452 reuse papers name a counted funder?,find_reuse_funders,"{""identifier"": ""phs000452""}",results.0.summary.reuse_papers_with_counted_funder,equals,184,pandas count on grants.csv,,
+C14,funders,How many phs002371 reuse papers are funded by NIH/NCI?,find_reuse_funders,"{""identifier"": ""phs002371""}",results.0.top_funders.0.reuse_papers,equals,30,pandas count on grants.csv,,top funder is NIH/NCI
+C15,error_handling,What if I give a reuse paper PMID (40021802)?,find_data_reusers,"{""identifier"": ""40021802""}",error,contains,REUSE paper of phs001493,papers.csv,,should explain not guess
+C16,error_handling,What if the study is unknown (phs999999)?,find_data_reusers,"{""identifier"": ""phs999999""}",error,contains,not in the results table,input rule,,
+C17,error_handling,What if the input is junk (hello world)?,find_data_reusers,"{""identifier"": ""hello world""}",error,contains,Input must be,input rule,,friendly message path
+C20,error_handling,Is a too-short input rejected (abc)?,find_data_reusers,"{""identifier"": ""abc""}",,tool_error,,Pydantic min_length=4,,first eval run: abc never reaches the friendly message
+C18,error_handling,Is an out-of-range setting rejected (max_papers 999)?,find_data_reusers,"{""identifier"": ""phs001493"", ""max_papers"": 999}",,tool_error,,Pydantic limit le=200,,
+C19,security,Does the server expose only the 4 read-only tools?,__list_tools__,{},,equals,find_data_reusers;find_reuse_data_sources;find_reuse_funders;find_studies,server.py,,no pipeline tools exposed (find_studies added 2026-11-13)
+C21,study_search,Which study is HTAN?,find_studies,"{""term"": ""HTAN""}",matches.0.accession,equals,phs002371,studies.json title scan,,Human Tumor Atlas Network (HTAN)
+C22,study_search,Does a study name work as input (HTAN)?,find_data_reusers,"{""identifier"": ""HTAN""}",resolved.accessions.0,equals,phs002371,studies.json title scan,,
+C23,study_search,Does an ambiguous name ask which study (atlas)?,find_data_reusers,"{""identifier"": ""atlas""}",error,contains,Several studies match,studies.json title scan,,phs002371 and phs003519
+C24,study_search,How many studies have neuroblastoma in the title?,find_studies,"{""term"": ""neuroblastoma""}",full_matches,equals,3,studies.json title scan,,phs000467 phs003111 phs003163

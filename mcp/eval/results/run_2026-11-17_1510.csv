@@ -1,0 +1,25 @@
+case_id,category,question_plain,expected,got,passed,seconds,run_time,deployment_id
+C01,correctness,How many papers reuse phs001493?,28,28,True,1.602,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C02,correctness,How many papers reuse phs000452?,219,219,True,0.112,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C03,correctness,How many papers reuse phs000467?,61,61,True,0.071,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C04,correctness,How many papers reuse phs002371?,44,44,True,0.065,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C05,input,Which study does seed PMID 29301960 belong to?,phs001493,phs001493,True,0.069,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C06,input,Which study does seed PMID 22622578 belong to?,phs000452,phs000452,True,0.069,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C07,input,Does a version suffix work (phs001493.v3.p1)?,phs001493,phs001493,True,0.068,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C08,correctness,Is PMID 40745034 listed as a reuser of phs001493?,40745034,28 papers listed,True,0.067,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C09,where,Top repository reusers name for phs000452?,dbGaP (database of Genotypes and Phenotypes),dbGaP (database of Genotypes and Phenotypes),True,0.087,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C10,where,How many reuse papers name dbGaP for phs000452?,56,56,True,0.073,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C11,funders,How many phs001493 reuse papers name a counted funder?,16,16,True,0.092,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C12,funders,Top funder of phs001493 reuse?,NIH/NCI,NIH/NCI,True,0.087,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C13,funders,How many phs000452 reuse papers name a counted funder?,184,184,True,0.131,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C14,funders,How many phs002371 reuse papers are funded by NIH/NCI?,30,30,True,0.083,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C15,error_handling,What if I give a reuse paper PMID (40021802)?,REUSE paper of phs001493,"PMID 40021802 is a REUSE paper of phs001493, not a seed paper. Ask about the phs accession instead.",True,0.063,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C16,error_handling,What if the study is unknown (phs999999)?,not in the results table,phs999999 is not in the results table yet.,True,0.075,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C17,error_handling,What if the input is junk (hello world)?,Input must be,"No study matches 'hello world'. Input must be a phs accession (e.g. phs001493), a seed-paper PMID (e.g. 29301960), or words from a study title (e.g. HTAN).",True,0.059,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C20,error_handling,Is a too-short input rejected (abc)?,,rejected: Extra data: line 1 column 3 (char 2),True,0.05,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C18,error_handling,Is an out-of-range setting rejected (max_papers 999)?,,rejected: Extra data: line 1 column 3 (char 2),True,0.047,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C19,security,Does the server expose only the 4 read-only tools?,find_data_reusers;find_reuse_data_sources;find_reuse_funders;find_studies,find_data_reusers;find_reuse_data_sources;find_reuse_funders;find_studies,True,0.051,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C21,study_search,Which study is HTAN?,phs002371,phs002371,True,0.061,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C22,study_search,Does a study name work as input (HTAN)?,phs002371,phs002371,True,0.065,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C23,study_search,Does an ambiguous name ask which study (atlas)?,Several studies match,"Several studies match 'atlas'. Ask the user which one, then use its phs number.",True,0.067,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab
+C24,study_search,How many studies have neuroblastoma in the title?,3,3,True,0.073,2026-11-17 15:10,01f1e29cda4510d4a135fa71840128ab

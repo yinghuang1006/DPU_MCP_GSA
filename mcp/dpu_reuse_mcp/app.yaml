@@ -1,0 +1,5 @@
+# Databricks App: DPU Data Reuse MCP server.
+# MCP endpoint: https://<app-url>/mcp   Health: https://<app-url>/health
+command:
+  - python
+  - server.py

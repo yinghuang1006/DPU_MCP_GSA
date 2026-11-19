@@ -1,0 +1,75 @@
+accession,source_pmid,found_by,year,first_author,title,used_in_pilot_run
+phs001493,29301960,Tool 1 Generated (rule E),2018,Miao,Genomic correlates of response to immune checkpoint therapies in clear cell renal cell carcinoma.,True
+phs000452,22622578,dbGaP study page + Tool 1 Generated (rule E),2012,Berger,Melanoma genome sequencing reveals frequent PREX2 mutations.,True
+phs000452,29132144,dbGaP study page,2017,Łuksza,A neoantigen fitness model predicts tumour response to checkpoint blockade immunotherapy.,False
+phs000452,39602539,dbGaP study page,2024,Tarantino,Genomic heterogeneity and ploidy identify patients with intrinsic resistance to PD-1 blockade in metastatic melanoma.,False
+phs000452,31792460,dbGaP study page + Tool 1 Generated (rule E),2019,Liu,Integrative molecular and clinical modeling of clinical outcomes to PD1 blockade in patients with metastatic melanoma.,False
+phs000452,39933900,Tool 1 Generated (rule E),2025,Schiantarelli,Genomic mediators of acquired resistance to immunotherapy in metastatic melanoma.,False
+phs000452,24390350,Tool 1 Generated (rule E),2014,Lawrence,Discovery and saturation analysis of cancer genes across 21 tumour types.,False
+phs000452,25160065,Tool 1 Generated (rule E),2014,Prandi,Unraveling the clonal hierarchy of somatic genomic aberrations.,False
+phs000452,22817889,Tool 1 Generated (rule E),2012,Hodis,A landscape of driver mutations in melanoma.,False
+phs000452,26359337,Entered by user (pilot only),2015,Van Allen,Genomic correlates of response to CTLA-4 blockade in metastatic melanoma.,True
+phs000463,19129520,dbGaP study page,2009,Mullighan,Deletion of IKZF1 and prognosis in acute lymphoblastic leukemia.,False
+phs000463,19470474,dbGaP study page,2009,Mullighan,JAK mutations in high-risk childhood acute lymphoblastic leukemia.,False
+phs000463,20139093,dbGaP study page,2010,Harvey,"Rearrangement of CRLF2 is associated with mutation of JAK kinases, alteration of IKZF1, Hispanic/Latino ethnicity, and a poor outcome in pediatric B-progenitor acute lymphoblastic leukemia.",False
+phs000463,19880498,dbGaP study page,2010,Kang,Gene expression classifiers for relapse-free survival and minimal residual disease improve risk classification and outcome prediction in pediatric B-precursor acute lymphoblastic leukemia.,False
+phs000463,20699438,dbGaP study page,2010,Harvey,"Identification of novel cluster groups in pediatric high-risk B-precursor acute lymphoblastic leukemia with gene expression profiling: correlation with genome-wide DNA copy number alterations, clinical characteristics, and outcome.",False
+phs000463,21680795,dbGaP study page,2011,Zhang,Key pathways are frequently mutated in high-risk childhood acute lymphoblastic leukemia: a report from the Children's Oncology Group.,False
+phs000463,22897847,dbGaP study page,2012,Roberts,Genetic alterations activating kinase and cytokine receptor signaling in high-risk acute lymphoblastic leukemia.,False
+phs000463,232125233,dbGaP study page,,,,False
+phs000464,25207766,dbGaP study page,2014,Roberts,Targetable kinase-activating lesions in Ph-like acute lymphoblastic leukemia.,False
+phs000465,40294366,Tool 1 Generated (rule E),2025,Huang,Hematopoietic Stem Cell Transplantation Outcomes for High-Risk AML: A Report From the Children's Oncology Group.,False
+phs000465,38295280,Tool 1 Generated (rule E),2024,Tarlock,Prognostic impact of cooccurring mutations in FLT3-ITD pediatric acute myeloid leukemia.,False
+phs000465,38306602,Tool 1 Generated (rule E),2024,Abla,Structural variants involving MLLT10 fusion are associated with adverse outcomes in pediatric acute myeloid leukemia.,False
+phs000465,36123353,Tool 1 Generated (rule E),2022,Huang,Integrated stem cell signature and cytomolecular risk determination in pediatric acute myeloid leukemia.,False
+phs000465,36149945,Tool 1 Generated (rule E),2022,Tang,Targeting FOLR1 in high-risk CBF2AT3-GLIS2 pediatric AML with STRO-002 FOLR1-antibody-drug conjugate.,False
+phs000465,30911218,Tool 1 Generated (rule E),2019,Gal,Predicting Complete Remission of Acute Myeloid Leukemia: Machine Learning Applied to Gene Expression.,False
+phs000467,23334666,dbGaP study page,2013,Pugh,The genetic landscape of high-risk neuroblastoma.,True
+phs000470,31708418,Tool 1 Generated (rule E),2019,Chun,Identification and Analyses of Extra-Cranial and Cranial Rhabdoid Tumor Molecular Subgroups Reveal Tumors with Cytotoxic T Cell Infiltration.,False
+phs000720,24436047,dbGaP study page,2014,Shern,Comprehensive genomic analysis of rhabdomyosarcoma reveals a landscape of alterations affecting a common genetic axis in fusion-positive and fusion-negative tumors.,False
+phs001327,11920786,dbGaP study page,2002,Robison,Study design and cohort characteristics of the Childhood Cancer Survivor Study: a multi-institutional collaborative project.,False
+phs001327,19364957,dbGaP study page,2009,Leisenring,Pediatric cancer survivorship research: experience of the Childhood Cancer Survivor Study.,False
+phs001327,29059430,dbGaP study page,2017,Morton,Genome-Wide Association Study to Identify Susceptibility Loci That Modify Radiation-Related Risk for Breast Cancer After Childhood Cancer.,False
+phs001437,31693904,dbGaP study page,2019,Rokita,Genomic Profiling of Childhood Tumor Patient-Derived Xenograft Models to Enable Rational Clinical Trial Design.,False
+phs001878,27181682,dbGaP study page,2016,Green,Clinical Sequencing Exploratory Research Consortium: Accelerating Evidence-Based Practice of Genomic Medicine.,False
+phs001878,25317207,dbGaP study page,2014,Scollon,Obtaining informed consent for clinical tumor and germline exome sequencing of newly diagnosed childhood cancer patients.,False
+phs002187,29227476,dbGaP study page,2018,Bolouri,The molecular landscape of pediatric acute myeloid leukemia reveals recurrent structural alterations and age-specific mutational interactions.,False
+phs002276,39143224,dbGaP study page,2024,Pölönen,The genomic basis of childhood T-lineage acute lymphoblastic leukaemia.,False
+phs002276,38916500,dbGaP study page,2024,Kimura,Biologic and Clinical Analysis of Childhood Gamma Delta T-ALL Identifies LMO2/STAG2 Rearrangements as Extremely High Risk.,False
+phs002276,38802512,dbGaP study page,2024,Sumaria,Perinatal thymic-derived CD8αβ-expressing γδ T cells are innate IFN-γ producers that expand in IL-7R-STAT5B-driven neoplasms.,False
+phs002276,32813610,dbGaP study page,2020,Dunsmore,Children's Oncology Group AALL0434: A Phase III Randomized Clinical Trial Testing Nelarabine in Newly Diagnosed T-Cell Acute Lymphoblastic Leukemia.,False
+phs002371,40101158,Tool 1 Generated (rule E),2025,Qin,Single-Cell Expression Analysis of Ductal Carcinoma In Situ Identifies Complex Genotypic-Phenotypic Relationships Altering Epithelial Composition.,True
+phs002371,42030938,Tool 1 Generated (rule E),2026,Sussman,A longitudinal single-cell and spatial multiomic atlas of pediatric high-grade glioma.,True
+phs002371,36973268,Tool 1 Generated (rule E),2023,Wu,Epigenetic and transcriptomic characterization reveals progression markers and essential pathways in clear cell renal cell carcinoma.,True
+phs002430,30266815,dbGaP study page,2019,Sayles,Genome-Informed Targeted Therapy for Osteosarcoma.,False
+phs002430,37703185,dbGaP study page,2024,Schott,Osteosarcoma PDX-Derived Cell Line Models for Preclinical Drug Evaluation Demonstrate Metastasis Inhibition by Dinaciclib through a Genome-Targeted Approach.,False
+phs002431,37584601,Tool 1 Generated (rule E),2023,Venneti,Clinical Efficacy of ONC201 in H3K27M-Mutant Diffuse Midline Gliomas Is Driven by Disruption of Integrated Metabolic and Epigenetic Pathways.,False
+phs002504,25704135,dbGaP study page,2015,Stieglitz,Phase II/III trial of a pre-transplant farnesyl transferase inhibitor in juvenile myelomonocytic leukemia: a report from the Children's Oncology Group.,False
+phs002504,26457647,dbGaP study page,2015,Stieglitz,The genomic landscape of juvenile myelomonocytic leukemia.,False
+phs002504,29259179,dbGaP study page,2017,Stieglitz,Genome-wide DNA methylation is predictive of outcome in juvenile myelomonocytic leukemia.,False
+phs002504,29528181,dbGaP study page,2018,Dvorak,"Disease burden and conditioning regimens in ASCT1221, a randomized phase II trial in children with juvenile myelomonocytic leukemia: A Children's Oncology Group study.",False
+phs002504,31347788,dbGaP study page,2019,Hecht,Molecular assessment of pretransplant chemotherapy in the treatment of juvenile myelomonocytic leukemia.,False
+phs002504,31511612,dbGaP study page,2020,Chao,Fusion driven JMML: a novel CCDC88C-FLT3 fusion responsive to sorafenib identified by RNA sequencing.,False
+phs002504,32815876,dbGaP study page,2021,Behnert,NUP98-NSD1 Driven MDS/MPN in Childhood Masquerading as JMML.,False
+phs002504,33139265,dbGaP study page,2021,Schönung,International Consensus Definition of DNA Methylation Subgroups in Juvenile Myelomonocytic Leukemia.,False
+phs002504,33375775,dbGaP study page,2022,Hecht,Molecular and phenotypic diversity of CBL-mutated juvenile myelomonocytic leukemia.,False
+phs002504,38152053,dbGaP study page,2024,Wintering,LNK/<i>SH2B3</i> as a novel driver in juvenile myelomonocytic leukemia.,False
+phs002504,38867349,dbGaP study page,2024,Stieglitz,Efficacy of the Allosteric MEK Inhibitor Trametinib in Relapsed and Refractory Juvenile Myelomonocytic Leukemia: a Report from the Children's Oncology Group.,False
+phs002620,35585047,dbGaP study page + Tool 1 Generated (rule E),2022,Shukla,Feasibility of whole genome and transcriptome profiling in pediatric and young adult cancers.,False
+phs002677,38992034,dbGaP study page,2024,Forrest,Molecular profiling of 888 pediatric tumors informs future precision trials and data-sharing initiatives in pediatric cancer.,False
+phs002823,32447501,dbGaP study page,2021,Grimes,Genetic markers for treatment-related pancreatitis in a cohort of Hispanic children with acute lymphoblastic leukemia.,False
+phs002883,28376230,dbGaP study page,2017,Allen,Target and Agent Prioritization for the Children's Oncology Group-National Cancer Institute Pediatric MATCH Trial.,False
+phs002883,35353553,dbGaP study page,2022,Parsons,Actionable Tumor Alterations and Treatment Protocol Enrollment of Pediatric and Young Adult Patients With Refractory Cancers in the National Cancer Institute-Children's Oncology Group Pediatric MATCH Trial.,False
+phs002883,35363510,dbGaP study page,2022,Eckstein,Phase II Study of Selumetinib in Children and Young Adults With Tumors Harboring Activating Mitogen-Activated Protein Kinase Pathway Genetic Alterations: Arm E of the NCI-COG Pediatric MATCH Trial.,False
+phs002883,38815151,dbGaP study page,2024,Glade Bender,Olaparib for childhood tumors harboring defects in DNA damage repair genes: arm H of the NCI-COG Pediatric MATCH trial.,False
+phs002883,37228094,dbGaP study page,2023,Chi,Tazemetostat for tumors harboring SMARCB1/SMARCA4 or EZH2 alterations: results from NCI-COG pediatric MATCH APEC1621C.,False
+phs002883,38873934,dbGaP study page,2024,Nelson,Phase II study of vemurafenib in children and young adults with tumors harboring BRAF V600 mutations: NCI-COG pediatric MATCH trial (APEC1621) Arm G.,False
+phs002883,31113801,dbGaP study page,2019,,Children Successfully MATCHed to Therapies.,False
+phs003160,31693904,dbGaP study page,2019,Rokita,Genomic Profiling of Childhood Tumor Patient-Derived Xenograft Models to Enable Rational Clinical Trial Design.,False
+phs003163,31693904,dbGaP study page,2019,Rokita,Genomic Profiling of Childhood Tumor Patient-Derived Xenograft Models to Enable Rational Clinical Trial Design.,False
+phs003432,32813610,dbGaP study page,2020,Dunsmore,Children's Oncology Group AALL0434: A Phase III Randomized Clinical Trial Testing Nelarabine in Newly Diagnosed T-Cell Acute Lymphoblastic Leukemia.,True
+phs003432,39587259,Tool 1 Generated (rule E),2025,Xu,"A multiomic atlas identifies a treatment-resistant, bone marrow progenitor-like cell population in T cell acute lymphoblastic leukemia.",True
+phs003519,36134665,dbGaP study page,2022,Kershner,Multiple Nf1 Schwann cell populations reprogram the plexiform neurofibroma tumor microenvironment.,False
+phs003519,37167059,dbGaP study page,2023,Zhang,Protocol for using single-cell sequencing to study the heterogeneity of NF1 nerve sheath tumors from clinical biospecimens.,False
+phs003519,36130486,dbGaP study page,2022,Zhang,Single-cell sequencing reveals activation of core transcription factors in PRC2-deficient malignant peripheral nerve sheath tumor.,False
+phs003519,34010628,dbGaP study page,2021,Sun,Stem-like cells drive NF1-associated MPNST functional heterogeneity and tumor progression.,False

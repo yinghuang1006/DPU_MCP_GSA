@@ -1,0 +1,6 @@
+# Temporary and local files
+/tmp/
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env

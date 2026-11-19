@@ -1,0 +1,21 @@
+case_id,category,question_plain,expected,got,passed,seconds,run_time,deployment_id
+C01,correctness,How many papers reuse phs001493?,28,28,True,1.794,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C02,correctness,How many papers reuse phs000452?,219,219,True,0.111,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C03,correctness,How many papers reuse phs000467?,61,61,True,0.071,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C04,correctness,How many papers reuse phs002371?,44,44,True,0.069,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C05,input,Which study does seed PMID 29301960 belong to?,phs001493,phs001493,True,0.072,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C06,input,Which study does seed PMID 22622578 belong to?,phs000452,phs000452,True,0.073,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C07,input,Does a version suffix work (phs001493.v3.p1)?,phs001493,phs001493,True,0.079,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C08,correctness,Is PMID 40745034 listed as a reuser of phs001493?,40745034,28 papers listed,True,0.079,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C09,where,Top repository reusers name for phs000452?,dbGaP (database of Genotypes and Phenotypes),dbGaP (database of Genotypes and Phenotypes),True,0.082,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C10,where,How many reuse papers name dbGaP for phs000452?,56,56,True,0.078,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C11,funders,How many phs001493 reuse papers name a counted funder?,16,16,True,0.083,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C12,funders,Top funder of phs001493 reuse?,NIH/NCI,NIH/NCI,True,0.082,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C13,funders,How many phs000452 reuse papers name a counted funder?,184,184,True,0.145,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C14,funders,How many phs002371 reuse papers are funded by NIH/NCI?,30,30,True,0.1,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C15,error_handling,What if I give a reuse paper PMID (40021802)?,REUSE paper of phs001493,"PMID 40021802 is a REUSE paper of phs001493, not a seed paper. Ask about the phs accession instead.",True,0.065,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C16,error_handling,What if the study is unknown (phs999999)?,not in the results table,phs999999 is not in the results table yet.,True,0.07,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C17,error_handling,What if the input is junk (hello world)?,Input must be,Input must be a phs accession (e.g. phs001493) or a PMID (e.g. 29301960).,True,0.061,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C20,error_handling,Is a too-short input rejected (abc)?,,rejected: Extra data: line 1 column 3 (char 2),True,0.055,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C18,error_handling,Is an out-of-range setting rejected (max_papers 999)?,,rejected: Extra data: line 1 column 3 (char 2),True,0.055,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311
+C19,security,Does the server expose only the 3 read-only tools?,find_data_reusers;find_reuse_data_sources;find_reuse_funders,find_data_reusers;find_reuse_data_sources;find_reuse_funders,True,0.054,2026-11-13 11:50,01f1df7cf2a91ce3953f8be481209311

@@ -1,0 +1,319 @@
+case_id,category,question,expected_tools,tools_called,tool_ok,input_ok,answer_ok,passed,tool_inputs,seconds,answer,run_time,model,deployment_id
+A01,who_reuses,Which papers have reused data from dbGaP study phs001493?,find_data_reusers,find_data_reusers,True,True,True,True,"[{""identifier"": ""phs001493"", ""max_papers"": 200}]",24.37,"The reuse index identifies **28 papers** associated with **phs001493**, *Whole Exome Predictors Immune Checkpoint Therapy Response in Renal Cell Carcinoma* (the Miao et al. dataset; source paper [PMID 29301960](https://pubmed.ncbi.nlm.nih.gov/29301960/)).
+
+These comprise **15 classified as confirmed use**, **1 as probable use**, and **12 preliminary matches** identified through citations to the source paper and statements of data use. The citation scan is incomplete, so this is **not necessarily an exhaustive list**.
+
+### Confirmed use
+These papers explicitly name the study accession.
+
+| Year | Paper | PMID |
+|---|---|---|
+| 2026 | Shen et al. **Generalizable AI predicts immunotherapy outcomes across cancers and treatments.** | [42399673](https://pubmed.ncbi.nlm.nih.gov/42399673/) |
+| 2025 | Kim et al. **B cell-reactive neoantigens boost antitumor immunity.** | [41337574](https://pubmed.ncbi.nlm.nih.gov/41337574/) |
+| 2025 | Park et al. **IC2Bert: masked gene expression pretraining and supervised fine tuning for robust immune checkpoint blockade (ICB) response prediction.** | [40745034](https://pubmed.ncbi.nlm.nih.gov/40745034/) |
+| 2025 | Zhang et al. **Immunogenic cell death signature predicts survival and reveals the role of VEGFA + Mast cells in lung adenocarcinoma.** | [40021802](https://pubmed.ncbi.nlm.nih.gov/40021802/) |
+| 2024 | Chang et al. **CapHLA: a comprehensive tool to predict peptide presentation and binding to HLA class I and class II.** | [39688477](https://pubmed.ncbi.nlm.nih.gov/39688477/) |
+| 2024 | Yang et al. **TCellSI: A novel method for T cell state assessment and its applications in immune environment prediction.** | [39429885](https://pubmed.ncbi.nlm.nih.gov/39429885/) |
+| 2024 | Sears et al. **Integrated Germline and Somatic Features Reveal Divergent Immune Pathways Driving Response to Immune Checkpoint Blockade.** | [39255339](https://pubmed.ncbi.nlm.nih.gov/39255339/) |
+| 2024 | Pineda et al. **DUX4 is a common driver of immune evasion and immunotherapy failure in metastatic cancers.** | [38829686](https://pubmed.ncbi.nlm.nih.gov/38829686/) |
+| 2023 | Lang et al. **Multiple instance learning to predict immune checkpoint blockade efficacy using neoantigen candidates.** | [37965155](https://pubmed.ncbi.nlm.nih.gov/37965155/) |
+| 2023 | Schina et al. **Intratumoral T-cell and B-cell receptor architecture associates with distinct immune tumor microenvironment features and clinical outcomes of anti-PD-1/L1 immunotherapy.** | [37604641](https://pubmed.ncbi.nlm.nih.gov/37604641/) |
+| 2023 | Pagadala et al. **Germline modifiers of the tumor immune microenvironment implicate drivers of cancer risk and immunotherapy response.** | [37173324](https://pubmed.ncbi.nlm.nih.gov/37173324/) |
+| 2023 | Zhou et al. **EREG is the core onco-immunological biomarker of cuproptosis and mediates the cross-talk between VEGF and CD99 signaling in glioblastoma.** | [36647156](https://pubmed.ncbi.nlm.nih.gov/36647156/) |
+| 2021 | Wang et al. **A pan-cancer transcriptome analysis of exitron splicing identifies novel cancer driver genes and neoepitopes.** | [33861991](https://pubmed.ncbi.nlm.nih.gov/33861991/) |
+| 2021 | Bi et al. **Tumor and immune reprogramming during immunotherapy in advanced renal cell carcinoma.** | [33711272](https://pubmed.ncbi.nlm.nih.gov/33711272/) |
+| 2020 | Castro et al. **Strength of immune selection in tumors varies with sex and age.** | [32807809](https://pubmed.ncbi.nlm.nih.gov/32807809/) |
+
+For example, Bi et al. state:
+> “For the Checkmate 009 cohort, raw bulk RNA-seq data were obtained from published results (Miao et al., 2018) (dbGaP: phs001493).”
+
+### Probable use
+
+| Year | Paper | PMID |
+|---|---|---|
+| 2024 | Liu et al. **Syndecan-1 inhibition promotes antitumor immune response and facilitates the efficacy of anti-PD1 checkpoint immunotherapy.** | [39259785](https://pubmed.ncbi.nlm.nih.gov/39259785/) |
+
+This paper describes interrogating tumor-biopsy expression data and explicitly includes **phs001493.v1.p1**, but the index labels it probable rather than confirmed.
+
+### Additional preliminary reuse matches
+These papers cite the source study and state that they used data. **Their linkage to this accession needs more caution**, because this citation-based identification method remains under review.
+
+| Year | Paper | PMID |
+|---|---|---|
+| 2026 | Rhrissorrakrai et al. **Quantum ensembling methods for healthcare and life science.** | [42242682](https://pubmed.ncbi.nlm.nih.gov/42242682/) |
+| 2025 | Li et al. **Chaperonin containing TCP1 subunit 5 as a novel pan-cancer prognostic biomarker for tumor stemness and immunotherapy response: insights from multi-omics data, integrated machine learning, and experimental validation.** | [40423850](https://pubmed.ncbi.nlm.nih.gov/40423850/) |
+| 2024 | Yang et al. **Identification of HDAC10 as a candidate oncogene in clear cell renal carcinoma that facilitates tumor proliferation and metastasis.** | [39237939](https://pubmed.ncbi.nlm.nih.gov/39237939/) |
+| 2022 | Freeman et al. **Combined tumor and immune signals from genomes or transcriptomes predict outcomes of checkpoint inhibition in melanoma.** | [35243413](https://pubmed.ncbi.nlm.nih.gov/35243413/) |
+| 2022 | Long et al. **A mutation-based gene set predicts survival benefit after immunotherapy across multiple cancers and reveals the immune response landscape.** | [35197093](https://pubmed.ncbi.nlm.nih.gov/35197093/) |
+| 2021 | McGrail et al. **Replication stress response defects are associated with response to immune checkpoint blockade in nonhypermutated cancers.** | [34705519](https://pubmed.ncbi.nlm.nih.gov/34705519/) |
+| 2021 | Gao et al. **Comprehensive analysis of immune-related prognostic genes in the tumour microenvironment of hepatocellular carcinoma.** | [33789609](https://pubmed.ncbi.nlm.nih.gov/33789609/) |
+| 2020 | Wu et al. **Identification of immune-related LncRNA for predicting prognosis and immunotherapeutic response in bladder cancer.** | [33221763](https://pubmed.ncbi.nlm.nih.gov/33221763/) |
+| 2020 | Wu et al. **High Expression of CD39 is Associated with Poor Prognosis and Immune Infiltrates in Clear Cell Renal Cell Carcinoma.** | [33116625](https://pubmed.ncbi.nlm.nih.gov/33116625/) |
+| 2020 | Das et al. **Cancer-Specific Immune Prognostic Signature in Solid Tumors and Its Relation to Immune Checkpoint Therapies.** | [32882873](https://pubmed.ncbi.nlm.nih.gov/32882873/) |
+| 2020 | Hakimi et al. **A pan-cancer analysis of PBAF complex mutations and their association with immunotherapy response.** | [32820162](https://pubmed.ncbi.nlm.nih.gov/32820162/) |
+| 2020 | Ye et al. **Sex-associated molecular differences for cancer immunotherapy.** | [32286310](https://pubmed.ncbi.nlm.nih.gov/32286310/) |
+
+**Important qualification:** The extracted evidence for Hakimi et al. names a different accession, **phs001565.v1.p1**, so that match particularly needs verification. Reuse here also includes data obtained from publications or other portals—not necessarily a direct dbGaP download.
+
+*Index snapshot: October 25, 2026. The preliminary citation scan covered the first 300 of approximately 1,000 citing papers.*",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A02,who_reuses,Who is using the Miao 2018 kidney cancer immunotherapy dataset? The paper is PMID 29301960.,find_data_reusers,find_data_reusers,True,True,True,True,"[{""identifier"": ""29301960"", ""max_papers"": 25}]",17.48,"The Miao 2018 dataset (**PMID 29301960**) maps to **[dbGaP phs001493](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001493)**, *Whole Exome Predictors Immune Checkpoint Therapy Response in Renal Cell Carcinoma*.
+
+The reuse index identifies **28 reuse papers from 2020–2026**: **15 confirmed**, **12 with data access/use stated**, and **1 probable**. Researchers are using it for immunotherapy-response prediction, germline and somatic biomarkers, neoantigens, and tumor immune biology.
+
+### Examples of who is using it
+The papers below are classified as **confirmed reuse**. Researcher matches refer to approved dbGaP requesters found among the authors—not necessarily the person who downloaded the data.
+
+| Authors / matched researchers | Reuse focus | Paper |
+|---|---|---|
+| **Bi K et al.** | Tumor and immune reprogramming during immunotherapy in advanced kidney cancer | *Cancer Cell*, 2021 — [PMID 33711272](https://pubmed.ncbi.nlm.nih.gov/33711272/) |
+| **Wang TY et al.**; requester-author match: **Rendong Yang** | Exitron splicing, cancer driver genes, and neoepitopes | *Molecular Cell*, 2021 — [PMID 33861991](https://pubmed.ncbi.nlm.nih.gov/33861991/) |
+| **Pagadala M et al.**; match: **Hannah Carter** | Germline modifiers of the tumor immune microenvironment and immunotherapy response | *Nature Communications*, 2023 — [PMID 37173324](https://pubmed.ncbi.nlm.nih.gov/37173324/) |
+| **Schina A et al.**; matches: **Zoltan Szallasi, Marco Donia** | T- and B-cell receptor architecture and anti-PD-1/L1 outcomes | *Journal for ImmunoTherapy of Cancer*, 2023 — [PMID 37604641](https://pubmed.ncbi.nlm.nih.gov/37604641/) |
+| **Lang F et al.** | Predicting checkpoint-blockade efficacy using neoantigen candidates | *iScience*, 2023 — [PMID 37965155](https://pubmed.ncbi.nlm.nih.gov/37965155/) |
+| **Pineda JMB et al.**; match: **Robert Bradley** | DUX4-mediated immune evasion and immunotherapy failure | *eLife*, 2024 — [PMID 38829686](https://pubmed.ncbi.nlm.nih.gov/38829686/) |
+| **Sears TJ et al.**; match: **Hannah Carter** | Integrated germline and somatic features of checkpoint-blockade response | *Cancer Immunology Research*, 2024 — [PMID 39255339](https://pubmed.ncbi.nlm.nih.gov/39255339/) |
+| **Chang Y et al.**; match: **Ligang Wu** | CapHLA peptide-presentation and HLA-binding prediction | *Briefings in Bioinformatics*, 2024 — [PMID 39688477](https://pubmed.ncbi.nlm.nih.gov/39688477/) |
+| **Park S et al.**; match: **Peng Jiang** | IC2Bert gene-expression modeling for immunotherapy-response prediction | *Scientific Reports*, 2025 — [PMID 40745034](https://pubmed.ncbi.nlm.nih.gov/40745034/) |
+| **Shen W et al.** | Generalizable AI prediction of immunotherapy outcomes across cancers | *Nature Medicine*, 2026 — [PMID 42399673](https://pubmed.ncbi.nlm.nih.gov/42399673/) |
+
+### Evidence that this is reuse, not just citation
+For example:
+- **Bi et al.:** “raw bulk RNA-seq data were obtained from published results (Miao et al., 2018) (dbGaP: phs001493).”
+- **Sears et al.:** “For Miao and colleagues renal cell carcinoma immunotherapy analysis, we used dbGap data from accession phs001493.v2.p1.”
+
+Across the indexed set, **20 of the 28 papers have an approved dbGaP requester among their authors**. This is an authorship match, not proof of a particular access route.
+
+**Coverage caveat:** These are indexed findings as of **October 25, 2026**, not an exhaustive census. The citation-based search examined only the first **300 of about 1,000 citing papers**, and that route’s classification precision remains under review.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A03,who_reuses,How many publications reuse phs000452?,find_data_reusers,find_data_reusers,True,True,True,True,"[{""identifier"": ""phs000452"", ""max_papers"": 1}]",7.89,"**219 publications** were identified as reusing **phs000452 (Melanoma Genome Sequencing Project)** as of October 25, 2026:
+
+- **195** confirmed-use publications
+- **16** probable-use publications
+- **8** additional publications citing a seed paper and stating data use
+
+This is a **preliminary count**, not necessarily exhaustive: the seed-paper citation scan covered only 300 of approximately 2,900 citing papers, and its classification precision remains under review.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A04,where_from,Where did researchers get the phs000452 data they reused?,find_reuse_data_sources,find_reuse_data_sources,True,True,True,True,"[{""identifier"": ""phs000452"", ""top_n"": 15, ""max_examples"": 10}]",10.15,"**dbGaP was the most commonly reported source** for reused **phs000452 (Melanoma Genome Sequencing Project)** data. Some researchers also reported obtaining the cohort through secondary portals such as **TIDE**.
+
+The preliminary reuse scan identified these source labels in sentences about the dataset:
+
+| Repository or portal | Distinct papers |
+|---|---:|
+| dbGaP | 56 |
+| GEO | 15 |
+| TIGER | 7 |
+| ENA | 5 |
+| SRA | 5 |
+| TIDE | 3 |
+| CGHub | 2 |
+| EGA | 2 |
+
+**Direct examples**
+- **dbGaP:** “The Liu/VanAllen cohort … (phs000452.v3 …) was downloaded from dbGaP database.” — [PMID 42065821](https://pubmed.ncbi.nlm.nih.gov/42065821/)
+- **TIDE:** “The other included 153 samples from phs000452, which was obtained from the TIDE database.” — [PMID 42238596](https://pubmed.ncbi.nlm.nih.gov/42238596/)
+- **The study’s dbGaP page:** A paper explicitly reported downloading phs000452 from the Melanoma Genome Sequencing Project URL at NCBI. — [PMID 41790623](https://pubmed.ncbi.nlm.nih.gov/41790623/)
+
+**Caution:** These are preliminary, automatically extracted counts—not verified download records or mutually exclusive totals. Some sentences list multiple datasets and repositories; for example, a sentence tagged “GEO” actually assigns **phs000452 to dbGaP**. Thus, the non-dbGaP counts should not all be interpreted as confirmed alternative access routes. The scan covered the first **300 of about 2,900 citing papers**, and extraction precision remains under review.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A05,where_from,What other datasets do people combine with phs000452 when they reuse it?,find_reuse_data_sources,find_reuse_data_sources,True,True,True,True,"[{""identifier"": ""phs000452"", ""top_n"": 20, ""max_examples"": 10}]",16.7,"People reuse **phs000452 (the Melanoma Genome Sequencing Project)** alongside **TCGA, GEO cohorts, and other immunotherapy datasets**, as well as reference resources.
+
+### Most common accompanying data sources
+Counts are distinct reuse papers naming each source—not counts of individual datasets.
+
+| Other source/resource | Reuse papers |
+|---|---:|
+| GEO | 70 |
+| TCGA | 66 |
+| MSigDB | 26 |
+| GDC | 25 |
+| UCSC | 22 |
+| Cancer Immunome Atlas (TCIA) | 12 |
+| cBioPortal | 12 |
+| Other dbGaP data | 9 |
+| Human Protein Atlas | 9 |
+| GTEx | 8 |
+| TIGER | 8 |
+| Genomics of Drug Sensitivity in Cancer (GDSC) | 6 |
+| Cancer Therapeutics Response Portal (CTRP) | 5 |
+| Cancer Cell Line Encyclopedia (CCLE) | 5 |
+| DepMap | 4 |
+
+These categories overlap: **GDC and cBioPortal are access portals**, for example, so their counts should not be added to TCGA’s. MSigDB is a reference resource rather than a patient cohort.
+
+### Specific datasets named alongside phs000452
+Examples from the papers’ methods or data-availability statements include:
+
+- **TCGA-SKCM, GSE91061, and GSE115978** — listed together with phs000452 in [PMID 42238596](https://pubmed.ncbi.nlm.nih.gov/42238596/).
+- **IMvigor210** and multiple GEO cohorts, including **GSE91061, GSE72056, and GSE115978** — [PMID 42065821](https://pubmed.ncbi.nlm.nih.gov/42065821/).
+- **GSE91061, GSE78220, phs001493, phs002822, and PRJEB25780**, plus several EGA datasets — listed as bulk RNA-seq sources in [PMID 40745034](https://pubmed.ncbi.nlm.nih.gov/40745034/).
+- **phs000980, phs001041, and PRJEB23709**, among additional WES/RNA-seq datasets — [PMID 39349759](https://pubmed.ncbi.nlm.nih.gov/39349759/).
+
+**Caveat:** These are preliminary results from a scan of the first **300 of about 2,900 citing papers**, with some reuse classifications still under review. “Combined” here means used in the same paper; it does not necessarily mean pooled into one analysis.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A06,who_funds,Which agencies fund the research that reuses phs001493?,find_reuse_funders,find_reuse_funders;find_reuse_funders,True,True,True,True,"[{""identifier"": ""phs001493"", ""top_n"": 20}, {""identifier"": ""phs001493"", ""top_n"": 100}]",15.19,"**NIH—especially the National Cancer Institute—and the National Natural Science Foundation of China are the leading agencies identified** in papers reusing **phs001493**, *Whole Exome Predictors Immune Checkpoint Therapy Response in Renal Cell Carcinoma*.
+
+### Leading agencies
+Counts are distinct reuse papers naming each funder.
+
+| Agency or NIH component | Reuse papers |
+|---|---:|
+| NIH, across all components | **10** |
+| ↳ National Cancer Institute (NCI) | 9 |
+| ↳ National Institute of General Medical Sciences (NIGMS) | 3 |
+| ↳ National Human Genome Research Institute (NHGRI) | 3 |
+| ↳ National Heart, Lung, and Blood Institute (NHLBI) | 2 |
+| ↳ National Institute of Environmental Health Sciences (NIEHS) | 2 |
+| National Natural Science Foundation of China | **5** |
+| U.S. National Science Foundation | 2 |
+| Cancer Prevention and Research Institute of Texas (CPRIT), under its main recorded name | 2 |
+
+Other named public funders include the **Congressionally Directed Medical Research Programs**, **European Research Council/European Commission**, **Danish National Board of Health**, **National Key Research and Development Program of China**, **Chinese Academy of Sciences**, and Korean research and technology programs administered through the **National Research Foundation**, **Korea Health Industry Development Institute**, **Korea Drug Development Fund**, and **Ministry of Trade, Industry and Energy**.
+
+Private and charitable support also appears, including the **Ludwig Trust, STARR Foundation, Lung Cancer Research Foundation, Lundbeck Foundation, Mark Foundation for Cancer Research, Cancer Research UK**, and **American Cancer Society**.
+
+**Scope and caveats:** Funding text was available for **19 reuse papers**, with counted research or infrastructure funders identified in **16**. Papers can name multiple funders, so counts overlap. Some organizations appear under variant names. These are acknowledgments of support for the reuse papers—not proof of grants specifically earmarked for this dataset’s reuse. The results are preliminary, based on a scan of the first **300 of about 1,000 citing papers**, and the tool excludes personnel-only support from its counts.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A07,who_funds,Is NIH the main funder of studies that reuse phs002371?,find_reuse_funders,find_reuse_funders,True,True,True,True,"[{""identifier"": ""phs002371"", ""top_n"": 100}]",8.15,"**Yes—by the number of reuse papers acknowledging support, NIH is the dominant funder** for **phs002371 (Human Tumor Atlas Network, HTAN)** in the available results.
+
+- **30 of 38 reuse papers with funding information** acknowledge NIH support—approximately **79%**.
+- **NCI leads**, appearing in **30 papers**; NHGRI appears in **7** and NIA in **5**. These counts overlap and should not be added.
+- Non-NIH funders appear much less frequently: for example, **Stand Up To Cancer** is listed in **3 papers**, and **Wellcome Trust** in **2**.
+
+This measures **funding acknowledgments, not dollars awarded or funding specifically allocated to data reuse**. Counts include research and infrastructure support, exclude personnel-only support, and some probable reuse classifications have not yet been reviewed by a person.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A08,who_funds,Who funds the reuse of the dataset generated in PMID 22622578?,find_reuse_funders,find_reuse_funders,True,True,True,True,"[{""identifier"": ""22622578""}]",10.0,"The dataset generated in **PMID 22622578** maps to the **Melanoma Genome Sequencing Project**, dbGaP accession [phs000452](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000452).
+
+**NIH’s National Cancer Institute and the National Natural Science Foundation of China are the most frequently acknowledged funders** in the identified reuse papers.
+
+| Funder | Reuse papers acknowledging support |
+|---|---:|
+| NIH — National Cancer Institute (NCI) | 65 |
+| National Natural Science Foundation of China | 54 |
+| National Key Research and Development Program of China | 17 |
+| NIH — National Human Genome Research Institute (NHGRI) | 15 |
+| NIH — National Institute of General Medical Sciences (NIGMS) | 10 |
+| NIH — Office of the Director | 9 |
+| Cancer Prevention and Research Institute of Texas | 8 |
+| NIH — National Heart, Lung, and Blood Institute (NHLBI) | 8 |
+| Fundamental Research Funds for the Central Universities | 7 |
+| U.S. Department of Defense | 7 |
+
+Other funders include the **European Research Council**, **Melanoma Research Alliance**, **Geoffrey Beene Cancer Research Center**, **Ludwig Trust**, **Lung Cancer Research Foundation**, and **STARR Foundation**, each acknowledged in **5** reuse papers.
+
+Across the results, **184 reuse papers** had a counted funder, with **362 distinct funders** identified. **73 papers** acknowledged at least one NIH funder. Papers can acknowledge multiple funders, so counts overlap.
+
+**Scope and caveat:** These are research and infrastructure funders acknowledged by reuse papers—not necessarily grants specifically awarded for reusing this dataset. Personnel support is excluded. The results are preliminary: the study’s citation scan covered the first **300 of approximately 2,900 citing papers**, and part of the reuse-classification method remains under review.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A09,multi_tool,For phs001493: who reuses the data and who funds that reuse?,find_data_reusers;find_reuse_funders,find_data_reusers;find_reuse_funders,True,True,True,True,"[{""identifier"": ""phs001493"", ""max_papers"": 25}, {""identifier"": ""phs001493"", ""top_n"": 20}]",20.08,"## phs001493: who reuses it?
+
+**phs001493** is *Whole Exome Predictors Immune Checkpoint Therapy Response in Renal Cell Carcinoma*, associated with the Miao et al. paper ([PMID 29301960](https://pubmed.ncbi.nlm.nih.gov/29301960/)).
+
+The available results identify **28 reuse papers**, spanning **2020–2026**:
+- **15 confirmed-use papers**, **1 probable-use paper**, and **12 papers stating data use while citing the original paper**.
+- **20 papers have an author matched to an approved dbGaP requester**. That match does not establish how the particular paper obtained the data.
+
+### Examples of reusing authors and teams
+These examples are all classified as **confirmed use**.
+
+| First author / team | Reuse application | Paper |
+|---|---|---|
+| **Shen W et al.** | AI prediction of immunotherapy outcomes across cancers and treatments | *Nature Medicine*, 2026 — [42399673](https://pubmed.ncbi.nlm.nih.gov/42399673/) |
+| **Park S et al.**; requester-author match: **Peng Jiang** | IC2Bert, a gene-expression model for predicting checkpoint-blockade response | *Scientific Reports*, 2025 — [40745034](https://pubmed.ncbi.nlm.nih.gov/40745034/) |
+| **Chang Y et al.**; match: **Ligang Wu** | CapHLA, prediction of peptide presentation and HLA binding | *Briefings in Bioinformatics*, 2024 — [39688477](https://pubmed.ncbi.nlm.nih.gov/39688477/) |
+| **Sears TJ et al.**; match: **Hannah Carter** | Germline and somatic determinants of checkpoint-blockade response | *Cancer Immunology Research*, 2024 — [39255339](https://pubmed.ncbi.nlm.nih.gov/39255339/) |
+| **Pineda JMB et al.**; match: **Robert Bradley** | DUX4-mediated immune evasion and immunotherapy failure | *eLife*, 2024 — [38829686](https://pubmed.ncbi.nlm.nih.gov/38829686/) |
+| **Pagadala M et al.**; match: **Hannah Carter** | Germline modifiers of the tumor immune microenvironment | *Nature Communications*, 2023 — [37173324](https://pubmed.ncbi.nlm.nih.gov/37173324/) |
+| **Wang TY et al.**; match: **Rendong Yang** | Exitron splicing, cancer driver genes, and neoepitopes | *Molecular Cell*, 2021 — [33861991](https://pubmed.ncbi.nlm.nih.gov/33861991/) |
+| **Bi K et al.** | Tumor and immune reprogramming during renal-cell-carcinoma immunotherapy | *Cancer Cell*, 2021 — [33711272](https://pubmed.ncbi.nlm.nih.gov/33711272/) |
+
+For example, Sears et al. explicitly state: “For Miao and colleagues renal cell carcinoma immunotherapy analysis, we used dbGap data from accession phs001493.v2.p1.”
+
+## Who funds that reuse?
+
+The funding analysis found **19 reuse papers with funding text**, of which **16 had counted research or infrastructure funders**, covering **57 distinct funders**. **10 papers named an NIH funder**.
+
+| Leading funder | Reuse papers acknowledging it |
+|---|---:|
+| **NIH / National Cancer Institute (NCI)** | **9** |
+| **National Natural Science Foundation of China** | **5** |
+| NIH / National Institute of General Medical Sciences (NIGMS) | 3 |
+| NIH / National Human Genome Research Institute (NHGRI) | 3 |
+| Geoffrey Beene Cancer Research Center | 3 |
+| Ludwig Trust | 3 |
+| Lung Cancer Research Foundation | 3 |
+| Queen Wilhelmina Cancer Research Award | 3 |
+| STARR Foundation | 3 |
+| Society for Memorial Sloan Kettering Cancer Center | 3 |
+| Cancer Prevention and Research Institute of Texas | 2 |
+| Lundbeck Foundation | 2 |
+| Mark Foundation for Cancer Research | 2 |
+
+Examples of acknowledged grants include **NCI R01CA269919**, **NIGMS P41GM103504**, **NHGRI U54HG003067**, and **NSFC 82273215**.
+
+### Important limits
+- **This is a preliminary, non-exhaustive picture**, as of the tool’s **October 25, 2026** snapshot. The citation-based scan covered the first **300 of about 1,000 citing papers**, and its classification precision remains under review.
+- **Funding coverage is narrower than reuse coverage:** the funding tool uses accession-identified reuse papers, not the full citation-derived set.
+- Funding counts reflect **acknowledgments in reuse papers**, not proof that a grant specifically paid for the phs001493 analysis. Papers can acknowledge multiple funders, so counts overlap. Personnel-only support is excluded from these reported counts.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A10,examples,Give me 3 example papers that reuse phs000467 with their PMIDs.,find_data_reusers,find_data_reusers,True,True,True,True,"[{""identifier"": ""phs000467"", ""max_papers"": 3}]",7.03,"Here are three example papers identified as reusing **phs000467 (TARGET: Neuroblastoma)**:
+
+| Paper | Year | PMID |
+|---|---|---|
+| ElHarouni et al. **“A compendium of next-generation patient-derived models for diverse cancers.”** *Nature* | 2026 | [42557316](https://pubmed.ncbi.nlm.nih.gov/42557316/) |
+| Endo et al. **“Synthetic lethality of EZH2 and DNMT Inhibition suppresses neuroblastoma proliferation via MYCN destabilization.”** *BMC Cancer* | 2025 | [41225513](https://pubmed.ncbi.nlm.nih.gov/41225513/) |
+| Porter et al. **“Associations between Tumor Ploidy and Overall Survival in Pediatric Neuroblastoma.”** *Puerto Rico Health Sciences Journal* | 2025 | [40163752](https://pubmed.ncbi.nlm.nih.gov/40163752/) |
+
+**Evidence note:** The Porter paper explicitly names phs000467. The first two were identified through citations to the dataset’s source paper and statements of data use; those matches are preliminary and have not yet been manually reviewed.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A11,unknown_input,Who reuses dbGaP study phs999999?,find_data_reusers,find_data_reusers,True,True,True,True,"[{""identifier"": ""phs999999""}]",6.4,"I couldn’t identify reusers of **phs999999** because the lookup tool reports that this accession **is not in its results table yet**. This does not establish that the study has no reuse or that the accession is invalid.
+
+Could you confirm the accession or share the study title so I can look for a matching study?",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A12,off_topic,What is the weather in Bethesda today?,none,(none),True,True,True,True,[],3.88,"I don’t have access to live weather data, so I can’t check today’s conditions. If you mean **Bethesda, Maryland**, check [the National Weather Service forecast](https://forecast.weather.gov/zipcity.php?inputstring=Bethesda,MD) for current weather and today’s outlook.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A13,study_name,What is the dbGaP phs number for the Human Tumor Atlas Network?,find_studies,find_studies,True,True,True,True,"[{""term"": ""Human Tumor Atlas Network""}]",5.09,The dbGaP accession for the **Human Tumor Atlas Network (HTAN)** is **[phs002371](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs002371)**.,2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A14,study_name,Who is reusing the HTAN data?,find_data_reusers,find_studies;find_data_reusers,True,True,True,True,"[{""term"": ""HTAN"", ""max_results"": 20}, {""identifier"": ""phs002371"", ""max_papers"": 50}]",21.59,"Researchers are reusing **Human Tumor Atlas Network (HTAN)** data—dbGaP accession **[phs002371](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs002371)**—for cancer biology, immunotherapy research, and computational methods development.
+
+The reuse index reports **44 paper records** as of **October 25, 2026**. Here are representative teams with explicit evidence of data use:
+
+| Researchers, identified by first author | What they used HTAN data for | Paper |
+|---|---|---|
+| **Hogg GD et al.** | Used Washington University HTAN pancreatic-cancer single-cell RNA-seq data as historical controls in an immunotherapy study. | *Science Immunology*, 2025 — [PMID 40815670](https://pubmed.ncbi.nlm.nih.gov/40815670/) |
+| **Werner J et al.** | Used external single-cell RNA-seq control samples to study CLL-1–targeted cellular immunotherapy for juvenile myelomonocytic leukemia. | *Nature Communications*, 2025 — [PMID 40268927](https://pubmed.ncbi.nlm.nih.gov/40268927/) |
+| **Sun K et al.** | Analyzed pancreatic-cancer single-cell data to investigate lactylation, immune suppression, and therapeutic resistance. | *Journal of Clinical Investigation*, 2025 — [PMID 39883522](https://pubmed.ncbi.nlm.nih.gov/39883522/) |
+| **Planell N et al.** | Downloaded HTAN sequencing files for research on early B-cell development and B-cell acute lymphoblastic leukemia. | *Science Advances*, 2025 — [PMID 41071881](https://pubmed.ncbi.nlm.nih.gov/41071881/) |
+| **Gong D et al.** | Analyzed pancreatic-cancer RNA-seq and single-cell datasets to study a GLIS3-marked cell state associated with metastasis. | *Cell Reports*, 2026 — [PMID 42048185](https://pubmed.ncbi.nlm.nih.gov/42048185/) |
+| **Chen C et al.** | Used HTAN WUSTL spatial-transcriptomics samples to study pancreatic-cancer immunotherapy responsiveness. | *Cancer Immunology Research*, 2026 — [PMID 42784801](https://pubmed.ncbi.nlm.nih.gov/42784801/) |
+| **Beltz, Christopher et al.** | Obtained single-cell count matrices and metadata from the HTAN portal for population-scale immune-cell classification. | *bioRxiv* preprint, 2026 — [PMID 42282793](https://pubmed.ncbi.nlm.nih.gov/42282793/); preliminary citation-based identification |
+
+### How to interpret the total
+- The index labels **36 records “Confirmed use,” 6 “Used (data access stated),” and 2 “Probable use.”**
+- **19 paper records** have an author matched to an approved dbGaP requester.
+- **44 is not a count of independent external research groups.** Some indexed evidence describes data deposition rather than clearly demonstrating secondary reuse; the results also include preprints and preliminary citation-based matches. The table above prioritizes explicit statements of downloading or analyzing existing data.",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A15,study_name,Who funds research that reuses the melanoma genome sequencing data?,find_reuse_funders,find_studies;find_reuse_funders,True,True,True,True,"[{""term"": ""melanoma"", ""max_results"": 10}, {""identifier"": ""phs000452"", ""top_n"": 15}]",12.09,"For the **Melanoma Genome Sequencing Project ([phs000452](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000452))**, the most frequently acknowledged funders in papers reusing its data are:
+
+| Funder | Reuse papers |
+|---|---:|
+| NIH—National Cancer Institute (NCI) | 65 |
+| National Natural Science Foundation of China | 54 |
+| National Key Research and Development Program of China | 17 |
+| NIH—National Human Genome Research Institute (NHGRI) | 15 |
+| NIH—National Institute of General Medical Sciences (NIGMS) | 10 |
+| NIH—Office of the Director | 9 |
+| Cancer Prevention and Research Institute of Texas | 8 |
+| NIH—National Heart, Lung, and Blood Institute (NHLBI) | 8 |
+| Fundamental Research Funds for the Central Universities | 7 |
+| U.S. Department of Defense | 7 |
+
+**Overall, 73 reuse papers acknowledge an NIH funder.** The funding analysis found 190 reuse papers with funding text, of which 184 had a counted research or infrastructure funder.
+
+These are **paper counts, not funding amounts**, and a paper can acknowledge multiple funders. They reflect support named by the reuse papers—not necessarily grants dedicated specifically to reusing this dataset. Personnel-only support, such as fellowships, is excluded.
+
+*Coverage is preliminary: the study record notes that only a sample of citing papers has been screened, and part of the reuse classification remains under review.*",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab
+A16,study_name,Who reuses the neuroblastoma data?,find_studies|find_data_reusers,find_studies;find_data_reusers;find_data_reusers,True,True,True,True,"[{""term"": ""neuroblastoma"", ""max_results"": 10}, {""identifier"": ""phs000467"", ""max_papers"": 15}, {""identifier"": ""phs003111"", ""max_papers"": 5}]",17.27,"If you mean **TARGET: Neuroblastoma (NBL), dbGaP accession phs000467**, the available index identifies **61 reuse papers**. Here are examples of researchers using it:
+
+| Researchers | What they used the data to study | Paper |
+|---|---|---|
+| **Porter TR et al.** | Tumor ploidy and overall survival in pediatric neuroblastoma | [2025, *Puerto Rico Health Sciences Journal*](https://pubmed.ncbi.nlm.nih.gov/40163752/) |
+| **Seo ES et al.** | Germline variants, somatic mutations, and outcomes; explicitly downloaded TARGET whole-exome sequencing data from dbGaP | [2024, *Nature Communications*](https://pubmed.ncbi.nlm.nih.gov/39333105/) |
+| **Suman M et al.** | Methylation of imprinted genes and prognostic refinement | [2024, *Journal of Translational Medicine*](https://pubmed.ncbi.nlm.nih.gov/39217334/) |
+| **Kaufman ME et al.** | T-cell inflammation and outcomes, using TARGET RNA-seq as a validation cohort | [2024, *Cancer Research Communications*](https://pubmed.ncbi.nlm.nih.gov/39099200/) |
+| **Saldana-Guerrero IM et al.** | Developmental effects of neuroblastoma-associated chromosomal changes | [2024, *Nature Communications*](https://pubmed.ncbi.nlm.nih.gov/38702304/) |
+| **Huang M et al.** | How ALK drives neuroblastoma through POSTN and WNT signaling | [2024, *Cell Reports*](https://pubmed.ncbi.nlm.nih.gov/38451815/) |
+
+**How strong is the evidence?** Of the 61 papers, the index labels 33 “Confirmed use,” 23 “Used—data access stated,” and 5 “Probable use.” The citation-based results are preliminary, so this is not a fully human-verified census. **38 papers have an author matched to an approved dbGaP requester**; that overlap alone does not establish how a particular paper obtained the data.
+
+There are also other neuroblastoma datasets:
+- **Clonal Evolution During Metastatic Spread in High-Risk Neuroblastoma (phs003111):** one indexed paper, Gundem et al. ([2023, *Nature Genetics*](https://pubmed.ncbi.nlm.nih.gov/37169874/)). It appears to be the dataset’s own study publication, so I would not treat it as clear evidence of independent reuse.
+- **Pediatric In Vivo Testing Program—Neuroblastoma (phs003163):** no reuse papers found in this index.
+
+*Index snapshot: October 25, 2026.*",2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab

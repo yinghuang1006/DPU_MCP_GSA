@@ -1,0 +1,538 @@
+{
+ "as_of": "2026-10-25",
+ "studies": {
+  "phs001493": {
+   "label": "Source paper: Miao D et al. 2018, Science (PMID 29301960)",
+   "version": "phs001493.v3.p1",
+   "source_pmids": [
+    "29301960"
+   ],
+   "collection": "Pilot",
+   "title": "Whole Exome Predictors Immune Checkpoint Therapy Response in Renal Cell Carcinoma",
+   "as_of": "2026-10-25",
+   "tool2": "run",
+   "tool2_note": "Preliminary sample: first 300 of about 1,000 citing papers. Rule C precision is under review.",
+   "short_name": ""
+  },
+  "phs000452": {
+   "label": "Source papers: Berger MF et al. 2012 (PMID 22622578); PMID 26359337",
+   "version": "phs000452.v5.p2",
+   "source_pmids": [
+    "22622578",
+    "26359337"
+   ],
+   "collection": "Pilot",
+   "title": "Melanoma Genome Sequencing Project",
+   "as_of": "2026-10-25",
+   "tool2": "run",
+   "tool2_note": "Preliminary sample: first 300 of about 2,900 citing papers. Rule C precision is under review.",
+   "short_name": ""
+  },
+  "phs000463": {
+   "collection": "CCDI",
+   "title": "TARGET: Acute Lymphoblastic Leukemia (ALL) Pilot Phase 1",
+   "label": "CCDI study",
+   "version": "phs000463.v23.p8",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs000464": {
+   "collection": "CCDI",
+   "title": "TARGET: Acute Lymphoblastic Leukemia (ALL) Expansion Phase 2",
+   "label": "CCDI study",
+   "version": "phs000464.v23.p8",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs000465": {
+   "collection": "CCDI",
+   "title": "TARGET: Acute Myeloid Leukemia (AML)",
+   "label": "CCDI study",
+   "version": "phs000465.v23.p8",
+   "source_pmids": [
+    "40294366",
+    "38295280",
+    "38306602",
+    "36123353",
+    "36149945",
+    "30911218"
+   ],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs000466": {
+   "collection": "CCDI",
+   "title": "TARGET: Kidney, Clear Cell Sarcoma of the Kidney (CCSK)",
+   "label": "CCDI study",
+   "version": "phs000466.v23.p8",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs000467": {
+   "collection": "CCDI",
+   "title": "TARGET: Neuroblastoma (NBL)",
+   "label": "CCDI study",
+   "version": "phs000467.v23.p8",
+   "source_pmids": [
+    "23334666"
+   ],
+   "as_of": "2026-10-25",
+   "tool2": "run",
+   "short_name": "",
+   "tool2_dbgap_included": true,
+   "tool2_note": "Full run (2026-10-26): all 987 papers citing Pugh 2013 (PMID 23334666, listed on the dbGaP study page; Tool 1 found no Generated paper), run with dbGaP publications INCLUDED. 'Probable' papers (61) not yet reviewed by a person."
+  },
+  "phs000468": {
+   "collection": "CCDI",
+   "title": "TARGET: Osteosarcoma (OS)",
+   "label": "CCDI study",
+   "version": "phs000468.v23.p8",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs000469": {
+   "collection": "CCDI",
+   "title": "TARGET: Cancer Model Systems (MDLS): Cell Lines and Xenografts (including PPTP)",
+   "label": "CCDI study",
+   "version": "phs000469.v23.p8",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs000470": {
+   "collection": "CCDI",
+   "title": "TARGET: Kidney, Rhabdoid Tumor (RT)",
+   "label": "CCDI study",
+   "version": "phs000470.v23.p8",
+   "source_pmids": [
+    "31708418"
+   ],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs000471": {
+   "collection": "CCDI",
+   "title": "TARGET: Kidney, Wilms Tumor (WT)",
+   "label": "CCDI study",
+   "version": "phs000471.v23.p8",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs000720": {
+   "collection": "CCDI",
+   "title": "Genomic Sequencing of Pediatric Rhabdomyosarcoma",
+   "label": "CCDI study",
+   "version": "phs000720.v5.p2",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs001228": {
+   "collection": "CCDI",
+   "title": "Gabriella Miller Kids First (GMKF) Pediatric Research Program in Susceptibility to Ewing Sarcoma Based on Germline Risk and Familial History of Cancer",
+   "label": "CCDI study",
+   "version": "phs001228.v3.p2",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs001327": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Survivor Study (CCSS)",
+   "label": "CCDI study",
+   "version": "phs001327.v3.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs001437": {
+   "collection": "CCDI",
+   "title": "Pediatric Preclinical Testing Consortium (PPTC)",
+   "label": "CCDI study",
+   "version": "phs001437.v2.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs001714": {
+   "collection": "CCDI",
+   "title": "Kids First: Genomic Analysis of Treatment Failure in Pediatric Osteosarcoma",
+   "label": "CCDI study",
+   "version": "phs001714.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs001738": {
+   "collection": "CCDI",
+   "title": "Kids First: Familial Predisposition to Hematopoietic Malignancies (SJFAMILY-HM)",
+   "label": "CCDI study",
+   "version": "phs001738.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs001846": {
+   "collection": "CCDI",
+   "title": "Kids First: The Intersection of Childhood Cancer and Birth Defects",
+   "label": "CCDI study",
+   "version": "phs001846.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs001878": {
+   "collection": "CCDI",
+   "title": "Kids First: Novel Cancer Susceptibility in Families (from BASIC3)",
+   "label": "CCDI study",
+   "version": "phs001878.v2.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs001987": {
+   "collection": "CCDI",
+   "title": "Kids First: Enchondromatoses and Related Malignant Tumors",
+   "label": "CCDI study",
+   "version": "phs001987.v3.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "short_name": ""
+  },
+  "phs002187": {
+   "collection": "CCDI",
+   "title": "Gabriella Miller Kids First Pediatric Research Program in Germline and Somatic Variants in Myeloid Malignancies in Children",
+   "label": "CCDI study",
+   "version": "phs002187.v2.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002276": {
+   "collection": "CCDI",
+   "title": "Gabriella Miller Kids First Pediatric Research Program in Pediatric T-Cell Acute Lymphoblastic Leukemia",
+   "label": "CCDI study",
+   "version": "phs002276.v5.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002322": {
+   "collection": "CCDI",
+   "title": "Kids First: Genetics of Pediatric Germ Cell Tumors",
+   "label": "CCDI study",
+   "version": "phs002322.v2.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002371": {
+   "collection": "CCDI",
+   "title": "Human Tumor Atlas Network (HTAN)",
+   "label": "CCDI study",
+   "version": "phs002371.v9.p2",
+   "source_pmids": [
+    "40101158",
+    "42030938",
+    "36973268"
+   ],
+   "as_of": "2026-10-25",
+   "tool2": "run",
+   "title_source": "dbGaP study summary",
+   "short_name": "",
+   "tool2_dbgap_included": true,
+   "tool2_note": "Full run (2026-10-26): all 64 papers citing the 3 Tool 1 Generated papers (Qin 2025, Sussman 2026, Wu 2023). No publication is listed on the dbGaP study page. 'Probable' papers not yet reviewed by a person."
+  },
+  "phs002430": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Genomic Analysis in Pediatric Malignancies",
+   "label": "CCDI study",
+   "version": "phs002430.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002431": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Enhancement of Data Sharing in Pediatric, Adolescent and Young Adult Cancers",
+   "label": "CCDI study",
+   "version": "phs002431.v1.p1",
+   "source_pmids": [
+    "37584601"
+   ],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002504": {
+   "collection": "CCDI",
+   "title": "UCSF Database for the Advancement of JMML - Integration of Metadata with Omic Data",
+   "label": "CCDI study",
+   "version": "phs002504.v3.p2",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002517": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Molecular Characterization across Pediatric Brain Tumors and Other Solid and Hematologic Malignancies for Research, Diagnostic, and Precision Medicine",
+   "label": "CCDI study",
+   "version": "phs002517.v5.p3",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002518": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): OncoKids - NGS Panel for Pediatric Malignancies",
+   "label": "CCDI study",
+   "version": "phs002518.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002529": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Comprehensive Genomic Sequencing of Pediatric Cancer Cases (CMRI/KUCC)",
+   "label": "CCDI study",
+   "version": "phs002529.v3.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002599": {
+   "collection": "CCDI",
+   "title": "NCI CCSG CCDI Supplement Additional Genomic Submission",
+   "label": "CCDI study",
+   "version": "phs002599.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002620": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Feasibility and Clinical Utility of Whole Genome Profiling in Pediatric and Young Adult Cancers",
+   "label": "CCDI study",
+   "version": "phs002620.v2.p2",
+   "source_pmids": [
+    "35585047"
+   ],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002677": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Integrating Longitudinal Clinical, Sociodemographic and Genomic Data into the NCCR",
+   "label": "CCDI study",
+   "version": "phs002677.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002790": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Molecular Characterization Initiative",
+   "label": "CCDI study",
+   "version": "phs002790.v11.p4",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": "CCDI MCI"
+  },
+  "phs002823": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): A Cohort of Hispanic Children with Acute Lymphoblastic Leukemia; Bloom Syndrome in a Mexican American Family with Rhabdomyosarcoma",
+   "label": "CCDI study",
+   "version": "phs002823.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs002883": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): NCI-COG Pediatric MATCH Precision Medicine Clinical Trial",
+   "label": "CCDI study",
+   "version": "phs002883.v2.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003111": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Clonal Evolution During Metastatic Spread in High-Risk Neuroblastoma",
+   "label": "CCDI study",
+   "version": "phs003111.v2.p2",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003160": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Pediatric In Vivo Testing Program –Sarcoma, Kidney, and Liver Cancers",
+   "label": "CCDI study",
+   "version": "phs003160.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003161": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Pediatric In Vivo Testing Program – Sarcomas and other Solid Tumors",
+   "label": "CCDI study",
+   "version": "phs003161.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003163": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Pediatric In Vivo Testing Program - Neuroblastoma",
+   "label": "CCDI study",
+   "version": "phs003163.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003164": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): CCDI Pediatric In Vivo Testing Program - Leukemia",
+   "label": "CCDI study",
+   "version": "phs003164.v2.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003215": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Texas Pediatric Patient Derived Xenograft",
+   "label": "CCDI study",
+   "version": "phs003215.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003432": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Identification and Targeting of Treatment Resistant Progenitor Populations in T-cell Acute Lymphoblastic Leukemia",
+   "label": "CCDI study",
+   "version": "phs003432.v1.p1",
+   "source_pmids": [
+    "32813610",
+    "39587259"
+   ],
+   "as_of": "2026-10-25",
+   "tool2": "run",
+   "title_source": "dbGaP study summary",
+   "short_name": "",
+   "tool2_dbgap_included": true,
+   "tool2_note": "Full run (2026-10-26): all 256 papers citing Dunsmore 2020 (PMID 32813610, dbGaP study page) and Xu 2025 (PMID 39587259, Tool 1 Generated), run with dbGaP publications INCLUDED. 135 of 256 have no full text to check. 'Probable' papers not yet reviewed."
+  },
+  "phs003519": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Single-Cell Atlas of NF1 Nerve Sheath Tumors",
+   "label": "CCDI study",
+   "version": "phs003519.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003975": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Metastatic Osteosarcoma Spatial Profiling",
+   "label": "CCDI study",
+   "version": "phs003975.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs003987": {
+   "collection": "CCDI",
+   "title": "Single Cell RNA Sequencing of Metastatic Adrenocortical Carcinoma and Tumor-Free Tissue",
+   "label": "CCDI study",
+   "version": "phs003987.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  },
+  "phs004222": {
+   "collection": "CCDI",
+   "title": "Childhood Cancer Data Initiative (CCDI): Admixture Analysis of Acute Lymphoblastic Leukemia in African American Children: The ADMIRAL Study",
+   "label": "CCDI study",
+   "version": "phs004222.v1.p1",
+   "source_pmids": [],
+   "as_of": "2026-10-25",
+   "tool2": "not run",
+   "title_source": "dbGaP study summary",
+   "short_name": ""
+  }
+ },
+ "tool2_status": "pilot sample"
+}

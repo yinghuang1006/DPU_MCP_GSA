@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "gov.nih.nci/dpu-data-reuse",
+  "description": "Read-only MCP server for NIH dbGaP dataset reuse: who reuses the data, where they get it, who funds the reuse. Input: phs accession, seed-paper PMID, or study name.",
+  "repository": {
+    "url": "https://github.com/yinghuang1006/DPU_MCP_GSA",
+    "source": "github"
+  },
+  "version": "0.2.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://dpu-reuse-mcp-7474654188777746.aws.databricksapps.com/mcp"
+    }
+  ]
+}

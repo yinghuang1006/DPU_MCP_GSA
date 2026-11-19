@@ -1,0 +1,17 @@
+case_id,category,question,expected_tools,expected_identifier,answer_regex,notes
+A01,who_reuses,Which papers have reused data from dbGaP study phs001493?,find_data_reusers,phs001493,\b28\b,28 reuse papers
+A02,who_reuses,Who is using the Miao 2018 kidney cancer immunotherapy dataset? The paper is PMID 29301960.,find_data_reusers,29301960,\b28\b,seed PMID input
+A03,who_reuses,How many publications reuse phs000452?,find_data_reusers,phs000452,\b219\b,
+A04,where_from,Where did researchers get the phs000452 data they reused?,find_reuse_data_sources,phs000452,dbGaP,top source dbGaP (56 papers)
+A05,where_from,What other datasets do people combine with phs000452 when they reuse it?,find_reuse_data_sources,phs000452,GEO|Gene Expression Omnibus,top other source GEO (70 papers)
+A06,who_funds,Which agencies fund the research that reuses phs001493?,find_reuse_funders,phs001493,NCI|National Cancer Institute,top funder NIH/NCI
+A07,who_funds,Is NIH the main funder of studies that reuse phs002371?,find_reuse_funders,phs002371,NCI|National Cancer Institute,NIH/NCI 30 papers
+A08,who_funds,Who funds the reuse of the dataset generated in PMID 22622578?,find_reuse_funders,22622578,NCI|National Cancer Institute,seed PMID -> phs000452
+A09,multi_tool,For phs001493: who reuses the data and who funds that reuse?,find_data_reusers;find_reuse_funders,phs001493,\b28\b.*NCI|NCI.*\b28\b,needs two tools
+A10,examples,Give me 3 example papers that reuse phs000467 with their PMIDs.,find_data_reusers,phs000467,\b\d{8}\b,answer must list PMIDs
+A11,unknown_input,Who reuses dbGaP study phs999999?,find_data_reusers,phs999999,not (in|available|found)|no (data|results|record)|isn.t|unknown|does not,must not invent numbers
+A12,off_topic,What is the weather in Bethesda today?,none,,.,must not call any tool
+A13,study_name,What is the dbGaP phs number for the Human Tumor Atlas Network?,find_studies,,phs002371,name -> phs
+A14,study_name,Who is reusing the HTAN data?,find_data_reusers,,\b44\b,name only; 44 reuse papers (phs002371)
+A15,study_name,Who funds research that reuses the melanoma genome sequencing data?,find_reuse_funders,,NCI|National Cancer Institute,name only -> phs000452
+A16,study_name,Who reuses the neuroblastoma data?,find_studies|find_data_reusers,,phs000467.*phs003111|phs003111.*phs000467|which (one|study)|several|multiple|more than one,ambiguous: 3 neuroblastoma studies; should list or ask

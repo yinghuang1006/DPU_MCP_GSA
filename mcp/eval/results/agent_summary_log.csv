@@ -1,0 +1,4 @@
+run_time,model,deployment_id,cases,right_tool_%,right_input_%,right_answer_%,all_three_%,median_seconds_per_question,note
+2026-11-17 15:15,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab,16,100.0,100.0,100.0,100.0,11.120000000000001,"run 1 of 3, 16 cases incl. study-name questions"
+2026-11-17 15:19,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab,16,100.0,100.0,100.0,100.0,10.68,run 2 of 3
+2026-11-17 15:24,models.ai.gpt-6-astra,01f1e29cda4510d4a135fa71840128ab,16,100.0,100.0,100.0,100.0,9.545,run 3 of 3
