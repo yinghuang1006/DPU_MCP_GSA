@@ -12,7 +12,7 @@ nest_asyncio.apply()
 st.set_page_config(page_title="Ask the data - DPU", layout="wide")
 
 MCP_URL = "https://dpu-reuse-mcp-7474654188777746.aws.databricksapps.com/mcp"
-MODEL = "models.ai.gpt-6-astra"
+MODEL = "system.ai.gpt-6-2-astra"  # Databricks-hosted (was models.ai.gpt-6-astra, OpenAI key invalidated 2026-11-20)
 EXAMPLES = [
     "Who is reusing the data from phs001493?",
     "Where did researchers get the phs000452 data they reused?",
@@ -105,8 +105,8 @@ if question:
                 res = ca.ask(history, question, llm_tools, call_tool, MODEL,
                              w.config.host, w.config.authenticate)
             except Exception as e:
-                res = {"answer": ("Sorry, the AI model could not be reached. The app needs "
-                                  f"permission to use {MODEL}.\n\nDetails: {str(e)[:300]}"),
+                res = {"answer": (f"Sorry, the AI model {MODEL} could not be reached."
+                                  f"\n\nDetails: {str(e)[:300]}"),
                        "trace": [], "seconds": None}
         st.markdown(res["answer"])
         show_trace(res["trace"], res["seconds"])
