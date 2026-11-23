@@ -1,8 +1,8 @@
 {
  "as_of": "2026-11-20",
- "source_file": "NCI KF DAC_20NOV2026.xlsx (Sheet2; rejected requests removed before classification)",
- "requests": 45335,
- "unique_statements": 10173,
+ "source_file": "HTAN (phs002371) subset of NCI KF DAC_20NOV2026.xlsx for hackathon demo",
+ "requests": 219,
+ "unique_statements": 211,
  "method": "skill rus-data-use-classifier: group prompt v1.3.1, platform prompt v1.3.1, clinical stage prompt v3; two models (databricks-claude-sonnet-4-6, databricks-gpt-5-1); agreed answers kept, disagreements labelled models differ",
  "how_to_read": [
   "Counts are unique statements unless stated; one statement can be used by several requests and studies.",

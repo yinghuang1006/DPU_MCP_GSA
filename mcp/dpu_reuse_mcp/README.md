@@ -14,6 +14,9 @@ An AI agent asks a question in plain English. The MCP server calls the right too
 | `find_data_reusers` | Who is reusing this dataset? |
 | `find_reuse_data_sources` | Where do people get the data they reuse? |
 | `find_reuse_funders` | Who funds the reuse? |
+| `rus_summary` | What do approved requesters plan to do with this data? |
+| `find_rus_requests` | Which requests plan this kind of use? |
+| `search_rus` | Which research use statements mention these words? |
 
 Input: a dbGaP phs accession (e.g. `phs001493`), a seed-paper PMID (e.g. `29301960`), or words from the study title (e.g. `HTAN`).
 
@@ -41,11 +44,13 @@ The server is stateless and read-only. It never runs the pipeline tools, never w
 
 | File | What it does |
 | --- | --- |
-| `server.py` | FastMCP server: 4 tool definitions, landing page, health check |
+| `server.py` | FastMCP server: 7 tool definitions, landing page, health check |
 | `reuse_data.py` | Query logic: load CSVs, resolve inputs, search/filter/count |
 | `app.yaml` | Databricks App config |
 | `requirements.txt` | `fastmcp>=4.1,<5`, `pydantic>=2.0`, `pandas>=2.0` |
 | `data/` | Pipeline results snapshot (CSV + JSON, as of 2026-10-25) |
+| `data/rus/` | RUS results snapshot: HTAN (phs002371) subset — 211 statements, 219 requests |
+| `rus_data.py` | RUS query logic: loading, filtering, summary, sunburst |
 
 ## Run locally
 
@@ -83,9 +88,13 @@ The `data/` folder is a frozen copy of the DPU pipeline results. Key files:
 
 To refresh: replace the CSV/JSON files with new pipeline output and redeploy.
 
+### RUS data (research use statements)
+
+The `data/rus/` folder contains a demo subset: HTAN (phs002371) only, 211 unique statements from 219 requests. The full dataset (10,173 statements, 45,335 requests across all NCI and Kids First DAC studies) is in the private repository. RUS labels were produced by two AI models (Claude Sonnet 4.6 and GPT-5.1); "models differ" means the models disagreed.
+
 ## Design decisions
 
-* **Goal-based tools, not API wrappers.** Each tool answers a user question, not a database operation.
+* **Goal-based tools, not API wrappers.** Each of the 7 tools answers a user question, not a database operation.
 * **Pydantic input validation.** Length and range limits catch bad input before any data is read.
 * **Snapshot, not live queries.** Fast, safe, and every answer is traceable to a reviewed pipeline run.
 * **Study-name search.** Users can say "HTAN" instead of memorising phs002371. Ambiguous names list candidates instead of guessing.
