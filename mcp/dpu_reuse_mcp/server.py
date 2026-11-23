@@ -1,10 +1,13 @@
 """DPU Data Reuse MCP server (read-only).
 
-Four goal-based tools over the DPU public results table:
+Goal-based tools over the DPU public results tables:
   find_studies             - which study (phs) matches a name or title words
   find_data_reusers        - who is reusing the data
   find_reuse_data_sources  - where people get the data they reuse
   find_reuse_funders       - who funds the reuse
+  rus_summary              - what approved requesters PLAN to do with the data (counts)
+  find_rus_requests        - which requests plan a given use (rows + evidence)
+  search_rus               - keyword search of Research Use Statements
 
 Run locally (stdio):   python server.py
 On Databricks Apps:    HTTP on DATABRICKS_APP_PORT, MCP endpoint at /mcp
@@ -21,6 +24,7 @@ from starlette.requests import Request
 from starlette.responses import HTMLResponse, JSONResponse
 
 import reuse_data as rd
+import rus_data as rus
 
 INSTRUCTIONS = """
 You answer questions about how a dbGaP dataset is reused in the literature.
@@ -36,9 +40,15 @@ Pick the tool by question:
 - "Where did they get the data / which repository / what other data?" -> find_reuse_data_sources
 - "Who funds the reuse / which grants / NIH vs other funders?" -> find_reuse_funders
 
+- "What do requesters plan to do / how many use AI / clinical vs preclinical / research
+  use statements (RUS)?" -> rus_summary (counts), find_rus_requests (which requests),
+  search_rus (find statements by words). These cover NCI DAC and Kids First DAC
+  requests (approved, closed, expired; rejected excluded) and take a phs number directly.
+
 Always report the as_of date, quote the evidence sentence for any paper you name,
 and repeat the how_to_read caveats. If a tool returns 'error', show the
-available_studies list instead of guessing. Do not invent numbers.
+available_studies list (or the error text) instead of guessing. Do not invent numbers.
+RUS labels come from two AI models; 'models differ' means they disagreed.
 """
 
 mcp = FastMCP(name="DPU Data Reuse", instructions=INSTRUCTIONS)
@@ -116,6 +126,88 @@ def find_reuse_funders(
     return rd.who_funds_reuse(identifier, include_personnel, top_n)
 
 
+DacField = Annotated[
+    str | None,
+    Field(description="'NCI DAC', 'Kids First DAC' or omit for both."),
+]
+PhsField = Annotated[
+    str | None,
+    Field(description="dbGaP study accession, e.g. 'phs002371' (version suffix allowed)."),
+]
+YearField = Annotated[int | None, Field(ge=2000, le=2100, description="Approval year bound (inclusive).")]
+StatusField = Annotated[
+    list[str] | None,
+    Field(description="Request statuses to keep: any of 'approved', 'closed', 'expired'. "
+                      "Omit for all three. Rejected requests are not in the data."),
+]
+GroupField = Annotated[
+    list[str] | None,
+    Field(description="Main group(s): 'Biology', 'Tool', 'Operations', 'Unclear', "
+                      "'Tool or biology (models differ)', 'Review (models differ)'."),
+]
+AiField = Annotated[
+    list[str] | None,
+    Field(description="AI use: 'Uses AI', 'Build AI', 'Apply AI', 'No AI', 'AI flag differs'."),
+]
+StageField = Annotated[
+    list[str] | None,
+    Field(description="Biology stage: 'Clinical', 'Preclinical', "
+                      "'Preclinical or clinical (models differ)'."),
+]
+TopicField = Annotated[
+    list[str] | None,
+    Field(description="Clinical topic: 'Clinical outcome', 'Treatment response', 'Diagnosis', "
+                      "'Adverse event', 'Other', 'Topic differs (models differ)'."),
+]
+TextField = Annotated[
+    str | None,
+    Field(description="Words that must all appear in the statement, e.g. 'single cell'.",
+          max_length=200),
+]
+
+
+@mcp.tool(annotations=READ_ONLY)
+def rus_summary(
+    dac: DacField = None, phs: PhsField = None, year_from: YearField = None,
+    year_to: YearField = None, statuses: StatusField = None, groups: GroupField = None,
+    ai: AiField = None, stages: StageField = None, topics: TopicField = None,
+    text: TextField = None,
+) -> dict:
+    """What do approved requesters plan to do with NCI / Kids First dbGaP data? Counts of
+    unique Research Use Statements by main group (biology / tool / operations / unclear),
+    AI use (build vs apply), clinical vs preclinical, clinical topic, plus requests, studies,
+    trend by first approval year and top studies, for the given filters."""
+    return rus.mcp_summary(dac, phs, year_from, year_to, statuses, groups, ai, stages,
+                           topics, text)
+
+
+@mcp.tool(annotations=READ_ONLY)
+def find_rus_requests(
+    dac: DacField = None, phs: PhsField = None, year_from: YearField = None,
+    year_to: YearField = None, statuses: StatusField = None, groups: GroupField = None,
+    ai: AiField = None, stages: StageField = None, topics: TopicField = None,
+    text: TextField = None,
+    max_results: Annotated[int, Field(ge=1, le=200, description="How many requests to list.")] = 25,
+) -> dict:
+    """Which dbGaP data access requests plan this kind of use? Returns matching requests
+    (wlid, study, requestor, affiliation, project, approval year, status) with their
+    labels, the evidence quote and the start of the research use statement."""
+    return rus.mcp_find_requests(dac, phs, year_from, year_to, statuses, groups, ai, stages,
+                                 topics, text, max_results)
+
+
+@mcp.tool(annotations=READ_ONLY)
+def search_rus(
+    text: Annotated[str, Field(description="Words that must all appear, e.g. 'deep learning'.",
+                               min_length=2, max_length=200)],
+    max_results: Annotated[int, Field(ge=1, le=100, description="How many statements to list.")] = 20,
+) -> dict:
+    """Keyword search of the Research Use Statements. Returns matching unique statements
+    (most-used first) with their labels, studies, number of requests and evidence quote,
+    plus a summary of the matches."""
+    return rus.mcp_search(text, max_results)
+
+
 @mcp.custom_route("/", methods=["GET"])
 async def home(request: Request) -> HTMLResponse:
     """Plain landing page so people opening the app URL see what it is."""
@@ -126,14 +218,19 @@ async def home(request: Request) -> HTMLResponse:
         "<ul><li>find_studies - which study (phs) matches a name</li>"
         "<li>find_data_reusers - who is reusing the data</li>"
         "<li>find_reuse_data_sources - where people get the data</li>"
-        "<li>find_reuse_funders - who funds the reuse</li></ul>"
+        "<li>find_reuse_funders - who funds the reuse</li>"
+        "<li>rus_summary - what requesters plan to do with the data (RUS counts)</li>"
+        "<li>find_rus_requests - which requests plan a given use</li>"
+        "<li>search_rus - keyword search of research use statements</li></ul>"
+        f"<p>RUS data as of {rus.as_of()} (NCI DAC and Kids First DAC).</p>"
         f"<p>Input: phs accession, seed-paper PMID or study name. Data as of {rd.as_of()}.</p>"
     )
 
 
 @mcp.custom_route("/health", methods=["GET"])
 async def health(request: Request) -> JSONResponse:
-    return JSONResponse({"status": "healthy", "data_as_of": rd.as_of()})
+    return JSONResponse({"status": "healthy", "data_as_of": rd.as_of(),
+                         "rus_data_as_of": rus.as_of()})
 
 
 def main() -> None:
